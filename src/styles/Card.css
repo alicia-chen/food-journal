@@ -1,0 +1,25 @@
+.card {
+  height: 440px;
+  margin: 50px;
+  width: 350px;
+  border: 2px solid black;
+  display: inline-block;
+}
+
+.cardTop {
+  height: 90px;
+  /* padding: 40px 0; */
+  display: inline-block;
+}
+
+.cardBottom {
+  height: 350px;
+  display: inline-block;
+}
+
+.cardImage {
+  height: 280px;
+  width: 280px;
+  margin: 30px;
+  border: solid 5p;
+}
