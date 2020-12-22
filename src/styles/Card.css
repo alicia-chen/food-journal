@@ -22,4 +22,5 @@
   width: 280px;
   margin: 30px;
   border: solid 5p;
+  object-fit: cover;
 }

@@ -1,21 +1,22 @@
-import React from "react"
-import "../styles/Card.css"
-import mangoImg from "../images/mango-crepe.jpg"
+import React from "react";
+import "../styles/Card.css";
 
 function Card(props) {
-    return(
-        <div className="card"> 
-            <div className="cardTop">
-                <h4>01-25-19</h4>
-            </div>
-            <div className="cardBottom">
-                <img className="cardImage"
-                    src={mangoImg}
-                    alt="mango crepe"
-                />
-            </div>  
-        </div>
-    )
+  // console.log("Card:imgCode:", props.imgCode)
+  return (
+    <div className="card">
+      <div className="cardTop">
+        <h4>{props.date}</h4>
+      </div>
+      <div className="cardBottom">
+        <img
+          className="cardImage"
+          src={require(`../images/${props.imgCode}.jpg`)}
+          alt={props.imgCode}
+        />
+      </div>
+    </div>
+  );
 }
 
 export default Card;

@@ -1,0 +1,48 @@
+.scorecard-container {
+  margin: 50px;
+}
+
+.tick-label-container {
+  /* display: flex; */
+  align-items: center;
+  width: 300px;
+  text-align: center;
+}
+
+.tick-label-one {
+  display: inline;
+  position: relative; 
+  right: 130px;
+}
+
+.tick-label-ten {
+  display: inline;
+  position: relative; 
+  left: 130px;
+}
+
+.scale-bar {
+  width: 300px;
+  height: 20px;
+  border-radius: 20px;
+  background: linear-gradient(to right, beige, orange);
+  text-align: center;
+  display: inline-flex;
+  position: relative;
+}
+
+.one-tick {
+  height: 20px;
+  width: 2px;
+  background: darkgray;
+  position: relative;
+  left: 10px;
+}
+
+.ten-tick {
+  height: 20px;
+  width: 2px;
+  background: darkgray;
+  position: relative;
+  left: 285px;
+}

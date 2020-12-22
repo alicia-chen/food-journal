@@ -1,38 +1,38 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
-import Entry from "./components/Entry"
+import Entry from "./components/Entry";
+import allEntryData from "./data/entry-data.json"
 
-export default function BasicExample() {
+function createEntry(entryData) {
+  //function that creates both route to the entry and Entry component
+  var routePath = "/components/entry" + entryData.date
+  return(
+    <Route 
+      path={routePath}
+      key={entryData.key}
+    >
+      <Entry
+      key={entryData.key}
+      name={entryData.name}
+      date={entryData.date}
+      imgPath={entryData.imgPath}
+      imgCode={entryData.imgCode}
+      text={entryData.text}
+      sweetScore={entryData.sweetScore}
+      recipeType={entryData.recipeType}
+      recipeUrl={entryData.recipeUrl}
+      recipeLinkText={entryData.recipeLinkText}
+      recipeText={entryData.recipeText}
+      />
+    </Route>
+  )
+}
+
+export default function App() {
   return (
     <Router>
       <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/dashboard">Dashboard</Link>
-          </li>
-        </ul>
-
-        <hr />
-
-        {/*
-          A <Switch> looks through all its children <Route>
-          elements and renders the first one whose path
-          matches the current URL. Use a <Switch> any time
-          you have multiple routes, but you want only one
-          of them to render at a time
-        */}
         <Switch>
           <Route exact path="/">
             <Home />
@@ -43,9 +43,7 @@ export default function BasicExample() {
           <Route path="/dashboard">
             <Dashboard />
           </Route>
-          <Route path="/components/entry">
-            <Entry />
-          </Route>
+          {allEntryData.map(createEntry)}
         </Switch>
       </div>
     </Router>

@@ -56,4 +56,7 @@ h1 {
 
 .entry-body-right-panel {
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

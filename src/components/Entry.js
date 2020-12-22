@@ -1,9 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Scorecard from "./Scorecard"
+import RecipeCard from "./RecipeCard";
 import "../styles/Entry.css";
-import foodImg from "../images/mango-crepe.jpg";
 
-export default function Entry() {
+export default function Entry(props) {
+  // console.log("hello world")
+  // console.log(props.imgCode)
+  // console.log(props.imgPath)
   return (
     <div>
       <div className="Entry-navbar">
@@ -17,34 +21,34 @@ export default function Entry() {
       </div>
 
       <div className="Entry-heading">
-        <h1>Mango Crepe</h1>
+        <h1>{props.name}</h1>
+        <h1>{props.date}</h1>
       </div>
 
       <div className="Entry-body">
-        <img className="food-photo" src={foodImg} alt="Food Photo" />
+        {/* <img className="food-photo" src={require(`${props.imgPath}`)} alt="Food Photo" /> */}
+        <img
+          className="food-photo"
+          src={require(`../images/${props.imgCode}.jpg`)}
+          alt="Food Photo"
+        />
+
         <div className="entry-body-right-panel">
           <div className="entry-text-container">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            <p>{props.text}</p>
           </div>
 
           <div className="scorecard">
-            <h3>Scorecard</h3>
-            <p>Savory vs Sweet: 10</p>
+            <Scorecard sweetScore={props.sweetScore} />
           </div>
 
-          <div className="recipe-container">
-            <h3>Recipe from:</h3>
-            <p><a href="https://www.instagram.com/p/CCGbqMcHO4H/">@dafengpork on Instagram</a></p>
-          </div>
-
+          <RecipeCard
+            recipeType={props.recipeType}
+            recipeUrl={props.recipeUrl}
+            recipeLinkText={props.recipeLinkText}
+            recipeIgHandle={props.recipeIgHandle}
+            recipeText={props.recipeText}
+          />
         </div>
       </div>
     </div>

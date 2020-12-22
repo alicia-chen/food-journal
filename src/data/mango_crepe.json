@@ -1,0 +1,12 @@
+{
+  "name": "Mango Crepe",
+  "date": "06-05-20",
+  "imgPath": "../images/mango-crepe.jpg",
+  "imgCode": "mango-crepe",
+  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  "sweetScore": "10",
+  "recipeType": "link",
+  "recipeUrl": "https://www.instagram.com/p/CCGbqMcHO4H/",
+  "recipeLinkText":"@dafengpork on Instagram",
+  "recipeText": ""
+}
