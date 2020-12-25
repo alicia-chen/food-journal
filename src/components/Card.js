@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "../styles/Card.css";
 
 function Card(props) {
@@ -6,7 +7,7 @@ function Card(props) {
   return (
     <div className="card">
       <div className="cardTop">
-        <h4>{props.date}</h4>
+          <h4 className="cardDate">{props.date}</h4>
       </div>
       <div className="cardBottom">
         <img

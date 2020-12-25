@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar"
 import Card from "../components/Card";
 import "../styles/Home.css";
 import profileImg from "../images/alicia-pic.jpg";
@@ -13,6 +14,7 @@ function createCard(cardData) {
         key={cardData.key}
         date={cardData.date}
         imgCode={cardData.imgCode}
+        routePath={routePath}
       />
     </Link>
   );
@@ -31,12 +33,7 @@ function createCardGrid(dataArray) {
 export default function Home() {
   return (
     <main>
-      <div className="Home-navbar">
-        <div className="nav-link-container">
-          <Link to="/">Journal</Link>
-          <Link to="/about">About</Link>
-        </div>
-      </div>
+      <Navbar/>
       <header className="Home-header">
         <h1>ALICIA'S FOOD JOURNAL</h1>
         <p>Kind of like a food blog, but more lo-fi.</p>

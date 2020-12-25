@@ -6,6 +6,10 @@
   display: inline-block;
 }
 
+.card:hover {
+  background-color: papayawhip;
+}
+
 .cardTop {
   height: 90px;
   /* padding: 40px 0; */
@@ -15,6 +19,14 @@
 .cardBottom {
   height: 350px;
   display: inline-block;
+}
+
+.cardDate{
+  color: black;
+}
+
+.cardDate:hover{
+  color: gray;
 }
 
 .cardImage {
