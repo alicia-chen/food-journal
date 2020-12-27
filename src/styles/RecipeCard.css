@@ -1,3 +1,13 @@
-.recipe-container {
+.recipe-link-container {
+  width: 750px;
+  align-items:left;
   text-align: left;
+  margin: auto;
+}
+
+.recipe-container {
+  width: 100%;
+  align-items: left;
+  text-align: left;
+  margin: auto;
 }

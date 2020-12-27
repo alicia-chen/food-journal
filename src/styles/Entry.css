@@ -10,33 +10,41 @@ h1 {
 
 .Entry-heading {
     margin-top: 100px;
+    width: 100%;
 }
 
 .Entry-body {
-    margin: 50px 30px;
+    margin: auto;
+    width: 750px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: left;
+    text-align:left
 }
 
 .food-photo {
-    width: 45%;
+    width: 650px;
+    margin: 30px 0;
+    align-items: left;
     /* position: relative;
     display: inline-block;
     left: 0; */
 }
 
-.entry-body-right-panel {
+/* .entry-body-right-panel {
     padding: 20px 110px;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} */
 
 .entry-text-container {
-    display: inline-block;
+    /* display: inline-block; */
     /* position: relative; */
+    width: 100%;
     right: 0;
-    margin: 0 10px;
+    margin: auto;
     text-align: left;
-    width: 50%;
+    /* text-align-last: start; */
 }
+
